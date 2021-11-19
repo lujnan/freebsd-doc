@@ -298,7 +298,6 @@ ${DOC}.parsed.xml: ${SRCS} ${XML_INCLUDES}
 .else
 	${MV} ${.TARGET}.tmp ${.TARGET}
 .endif
-	echo "=====${SED} 's|@@URL_RELPREFIX@@|https://www.FreeBSD.org|g' < ${.TARGET} > ${DOC}.parsed.print.xml"
 	${SED} 's|@@URL_RELPREFIX@@|https://www.FreeBSD.org|g' < ${.TARGET} > ${DOC}.parsed.print.xml
 	${SED} -i '' -e 's|@@URL_RELPREFIX@@|../../../..|g' ${.TARGET}
 
