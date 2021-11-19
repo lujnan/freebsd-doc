@@ -21,6 +21,7 @@
 	<directory recursive="true">/usr/local/lib/X11/fonts</directory>
 	<directory>/usr/local/share/fonts/TrueType</directory>
 	<directory>/usr/local/share/fonts/OTF</directory>
+	<directory>/Users/lujnan/Library/Fonts</directory>
 	<auto-detect/>
       </fonts>
 

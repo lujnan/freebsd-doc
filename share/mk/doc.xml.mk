@@ -4,7 +4,11 @@
 XML_CATALOG_FILES=	file://${.OBJDIR}/catalog-cwd.xml \
 			file://${DOC_PREFIX}/${LANGCODE}/share/xml/catalog.xml \
 			file://${DOC_PREFIX}/share/xml/catalog.xml \
-			file://${LOCALBASE}/share/xml/catalog
+			file://${LOCALBASE}/share/xml/catalog \
+			file://${LOCALBASE}/etc/xml/catalog
+
+
+
 .if defined(EXTRA_CATALOGS)
 XML_CATALOG_FILES+=	${EXTRA_CATALOGS}
 .endif
@@ -288,11 +292,13 @@ XSLTPROCOPTS+=	--xinclude --nonet --maxvars 20000
 .if defined(WWWFREEBSDORG)
 XSLTPROCOPTS+=	--param "html.header.script.google" "'INCLUDE'"
 .endif
-XSLTPROC=	env ${XSLTPROC_ENV} ${LOCALBASE}/bin/xsltproc
+#XSLTPROC=	env ${XSLTPROC_ENV} ${LOCALBASE}/bin/xsltproc
+XSLTPROC=	env ${XSLTPROC_ENV} /usr/bin/xsltproc
 
 XMLLINTOPTS=	${XMLLINTFLAGS}
 XMLLINTOPTS+=	--xinclude --valid --noout --nonet
-XMLLINT=	env ${XSLTPROC_ENV} ${PREFIX}/bin/xmllint
+#XMLLINT=	env ${XSLTPROC_ENV} ${PREFIX}/bin/xmllint
+XMLLINT=	env ${XSLTPROC_ENV} /usr/bin/xmllint
 
 .for D in ${XMLDOCS}
 # parse "docid:xslt:xml:target".

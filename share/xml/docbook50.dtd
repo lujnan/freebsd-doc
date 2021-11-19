@@ -31,6 +31,7 @@
 	audience	CDATA	#IMPLIED
 	condition	CDATA	#IMPLIED
 	conformance	CDATA	#IMPLIED
+	xmlns:mml       CDATA   #FIXED  'http://www.w3.org/1998/Math/MathML'
 	xmlns:its	CDATA	#FIXED	'http://www.w3.org/2005/11/its'
 	its:translate	(yes|no)	#IMPLIED
 	os	CDATA	#IMPLIED

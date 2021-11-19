@@ -72,7 +72,14 @@ ALL_FORMATS=	html html.tar html-split html-split.tar txt rtf pdf tex dvi tar
 .include "doc.commands.mk"
 
 # User-modifiable
+MY_HOSTNAME != uname -s
+MY_MACHINE_ARCH != uname -m
+.if ${MY_HOSTNAME} == "Darwin" && ${MY_MACHINE_ARCH} == "arm64"
+LOCALBASE?=	/opt/homebrew
+.else
 LOCALBASE?=	/usr/local
+.endif
+
 PREFIX?=	${LOCALBASE}
 PRI_LANG?=	en_US.ISO8859-1
 

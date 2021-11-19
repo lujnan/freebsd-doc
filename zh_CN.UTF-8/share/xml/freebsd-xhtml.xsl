@@ -7,6 +7,9 @@
                 xmlns="http://www.w3.org/TR/xhtml1/transitional"
                 exclude-result-prefixes="#default">
 
+  <xsl:param name="make.clean.html" select="0"></xsl:param>
+  <xsl:param name="toc.section.depth">3</xsl:param>
+<!--
   <xsl:template name="user.footer.navigation">
     <p align="center"><small>本文档和其它文档可从这里下载：
     <a href="ftp://ftp.FreeBSD.org/pub/FreeBSD/doc/">ftp://ftp.FreeBSD.org/pub/FreeBSD/doc/</a>.</small></p>
@@ -16,5 +19,15 @@
     &lt;<a href="mailto:questions@FreeBSD.org">questions@FreeBSD.org</a>&gt;.<br/>
     关于本文档的问题请发信联系
     &lt;<a href="mailto:doc@FreeBSD.org">doc@FreeBSD.org</a>&gt;.</small></p>
+  </xsl:template>
+-->
+  <xsl:template name="user.footer.navigation">
+    <p align="center"><small>如果有问题，请联系
+    &lt;<a href="mailto:lujnan@gmail.com">lujnan@gmail.com</a>&gt;.<br/>
+    </small></p>
+  </xsl:template>
+
+  <xsl:template match="processing-instruction('linebreak')">
+    <br/>
   </xsl:template>
 </xsl:stylesheet>

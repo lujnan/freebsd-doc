@@ -28,7 +28,15 @@ PERL?=		/usr/local/bin/perl
 PERL?=		perl
 .endif
 PKG_CREATE?=	/usr/sbin/pkg_create
+.if exists(/usr/local/bin/realpath)
+REALPATH?=	/usr/local/bin/realpath
+.elif exists(/opt/homebrew/bin/realpath)
+REALPATH?=	/opt/homebrew/bin/realpath
+.elif exists(/bin/realpath)
 REALPATH?=	/bin/realpath
+.else
+REALPATH?=	realpath
+.endif
 SED?=		/usr/bin/sed
 SETENV?=	/usr/bin/env
 SH?=		/bin/sh

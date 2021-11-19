@@ -102,9 +102,22 @@
   </l:i18n>
 
   <!-- Base fonts -->
+<!--
   <xsl:param name="body.font.family">Gentium Plus, AR PL SungtiL GB</xsl:param>
   <xsl:param name="sans.font.family">Droid Sans, AR PL KaitiM GB</xsl:param>
   <xsl:param name="title.font.family">Droid Sans, Droid Sans Fallback</xsl:param>
   <xsl:param name="monospace.font.family">Droid Sans Mono, Droid Sans Fallback</xsl:param>
+-->
+  <xsl:param name="body.font.family">Songti SC, STHeiti, STKaiti, Hei, Heiti SC</xsl:param>
+  <xsl:param name="sans.font.family">Songti SC, STHeiti, STKaiti, Hei, Heiti SC</xsl:param>
+  <xsl:param name="title.font.family">Songti SC, STHeiti, STKaiti, Hei, Heiti SC</xsl:param>
+  <xsl:param name="monospace.font.family">Songti SC, STHeiti, STKaiti, Hei, Heiti SC</xsl:param>
+
+  <xsl:template match="processing-instruction('custom-pagebreak')">
+     <!-- <fo:block break-before='page'/> -->
+  </xsl:template>
+  <xsl:template match="processing-instruction('linebreak')">
+    <fo:block/>
+  </xsl:template>
 
 </xsl:stylesheet>
