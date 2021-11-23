@@ -7,6 +7,7 @@
                 version='1.0'
 		xmlns:str="http://exslt.org/strings"
                 xmlns:db="http://docbook.org/ns/docbook"
+		xmlns:mml="http://www.w3.org/1998/Math/MathML"
                 exclude-result-prefixes="db"
 		extension-element-prefixes="str">
 

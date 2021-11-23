@@ -4,7 +4,8 @@ default namespace db = "http://docbook.org/ns/docbook"
 
 # ======================================================================
 
-include "/usr/local/share/xml/docbook/5.0/rng/docbook.rnc" inherit = db {
+#"/usr/local/share/xml/docbook/5.0/rng/docbook.rnc"
+include "/opt/homebrew/Cellar/docbook/5.1_1/docbook/xml/5.0/rng" inherit = db {
 
   # XXX: trademark not allowed in lineannotation in normal DocBook 5.0
   db.lineannotation =

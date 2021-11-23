@@ -11,6 +11,20 @@
 	"http://www.FreeBSD.org/XML/share/xml/iso8879.ent">
 %iso8879.ent;
 
+<!-- config for mathml 3.0 -->
+
+<!--
+<!ENTITY % equation.content "(alt?, (graphic+|mediaobject+|mml:math))">
+<!ENTITY % inlineequation "(alt?, (inlinegraphic+|inlinemediaobject+|mml:math))">
+<!ENTITY % mathml PUBLIC "-//W3C//DTD MathML 2.0//EN"
+        "mathml2/mathml2.dtd">
+-->
+
+<!ENTITY % MATHML.prefixed "INCLUDE">
+<!ENTITY % MATHML.prefix "mml">
+<!ENTITY % mathml PUBLIC "-//W3C//DTD MathML 3.0//EN" "http://www.w3.org/Math/DTD/mathml3/mathml3.dtd">
+%mathml;
+
 <!ENTITY % orig-docbook PUBLIC "-//OASIS//DTD DocBook XML V5.0//EN"
 	"docbook50.dtd">
 %orig-docbook;
@@ -26,3 +40,5 @@
 <!ENTITY % man PUBLIC "-//FreeBSD//ENTITIES DocBook Manual Page Entities//EN"
 	"man-refs.ent">
 %man;
+
+

@@ -9,6 +9,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:db="http://docbook.org/ns/docbook"
   xmlns:str="http://exslt.org/strings"
+  xmlns:mml="http://www.w3.org/1998/Math/MathML"
   xmlns="http://www.w3.org/1999/xhtml"
   exclude-result-prefixes="cvs xhtml"
   extension-element-prefixes="str">

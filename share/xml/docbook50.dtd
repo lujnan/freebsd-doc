@@ -31,7 +31,6 @@
 	audience	CDATA	#IMPLIED
 	condition	CDATA	#IMPLIED
 	conformance	CDATA	#IMPLIED
-	xmlns:mml       CDATA   #FIXED  'http://www.w3.org/1998/Math/MathML'
 	xmlns:its	CDATA	#FIXED	'http://www.w3.org/2005/11/its'
 	its:translate	(yes|no)	#IMPLIED
 	os	CDATA	#IMPLIED
@@ -1682,6 +1681,7 @@
 
 <!ATTLIST book
 	xmlns	CDATA	#FIXED	"http://docbook.org/ns/docbook"
+	xmlns:mml	CDATA	#FIXED	"http://www.w3.org/1998/Math/MathML"
 	role	CDATA	#IMPLIED
 	%db.common.attributes;
 	%db.common.linking.attributes;
@@ -1814,6 +1814,7 @@
 
 <!ATTLIST article
 	xmlns	CDATA	#FIXED	"http://docbook.org/ns/docbook"
+	xmlns:mml	CDATA	#FIXED	"http://www.w3.org/1998/Math/MathML"
 	role	CDATA	#IMPLIED
 	%db.common.attributes;
 	%db.common.linking.attributes;
@@ -3344,7 +3345,7 @@
 
 >
 
-<!ELEMENT equation (((title|titleabbrev)*, (info)?), (alt)?, ((mediaobject)+|(mathphrase)+), (caption)?)>
+<!ELEMENT equation (((title|titleabbrev)*, (info)?), (alt)?, ((mediaobject)+|(mathphrase)+|(mml:math)+), (caption)?)>
 
 <!ATTLIST equation
 	xmlns	CDATA	#FIXED	"http://docbook.org/ns/docbook"
@@ -3357,7 +3358,7 @@
 
 >
 
-<!ELEMENT informalequation ((info)?, (alt)?, ((mediaobject)+|(mathphrase)+), (caption)?)>
+<!ELEMENT informalequation ((info)?, (alt)?, ((mediaobject)+|(mathphrase)+|(mml:math)+), (caption)?)>
 
 <!ATTLIST informalequation
 	xmlns	CDATA	#FIXED	"http://docbook.org/ns/docbook"
@@ -3367,7 +3368,7 @@
 
 >
 
-<!ELEMENT inlineequation ((alt)?, ((inlinemediaobject)+|(mathphrase)+))>
+<!ELEMENT inlineequation ((alt)?, ((inlinemediaobject)+|(mathphrase)+|(mml:math)+))>
 
 <!ATTLIST inlineequation
 	xmlns	CDATA	#FIXED	"http://docbook.org/ns/docbook"
